@@ -1,10 +1,9 @@
 // Auto-generated trivia questions from markdown files
-// Generated on 2025-08-04 16:59:03
+// Generated on 2025-08-04 17:09:46
 
 // Question categories and counts
 const questionCategories = {
     "1940S Trivia Questions": 26,
-    "1950S Trivia Questions": 10,
     "August 1945 Pop Culture Questions": 50
 };
 
@@ -321,126 +320,6 @@ const triviaQuestions = [
         "correct": 0,
         "answer": "Dwight D. Eisenhower",
         "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which conflict began in 1950 involving North and South Korea?",
-        "options": [
-            "Vietnam War",
-            "Korean War",
-            "Cold War",
-            "Gulf War"
-        ],
-        "correct": 1,
-        "answer": "Korean War",
-        "category": "1950S Trivia Questions"
-    },
-    {
-        "question": "Who was the U.S. President during most of the 1950s?",
-        "options": [
-            "Harry S. Truman",
-            "Dwight D. Eisenhower",
-            "John F. Kennedy",
-            "Richard Nixon"
-        ],
-        "correct": 1,
-        "answer": "Dwight D. Eisenhower",
-        "category": "1950S Trivia Questions"
-    },
-    {
-        "question": "What 1957 event marked the beginning of the Space Age?",
-        "options": [
-            "Moon Landing",
-            "Sputnik Launch",
-            "Apollo 11",
-            "First human in space"
-        ],
-        "correct": 1,
-        "answer": "Sputnik Launch",
-        "category": "1950S Trivia Questions"
-    },
-    {
-        "question": "Which vaccine was widely introduced in the 1950s to combat polio?",
-        "options": [
-            "Smallpox Vaccine",
-            "Polio Vaccine",
-            "Influenza Vaccine",
-            "Measles Vaccine"
-        ],
-        "correct": 1,
-        "answer": "Polio Vaccine",
-        "category": "1950S Trivia Questions"
-    },
-    {
-        "question": "Which famous civil rights event occurred in 1955 involving Rosa Parks?",
-        "options": [
-            "Montgomery Bus Boycott",
-            "March on Washington",
-            "Selma March",
-            "Little Rock Nine"
-        ],
-        "correct": 0,
-        "answer": "Montgomery Bus Boycott",
-        "category": "1950S Trivia Questions"
-    },
-    {
-        "question": "Which type of music rose to popularity in the 1950s?",
-        "options": [
-            "Jazz",
-            "Rock and Roll",
-            "Disco",
-            "Rap"
-        ],
-        "correct": 1,
-        "answer": "Rock and Roll",
-        "category": "1950S Trivia Questions"
-    },
-    {
-        "question": "Who was known as the King of Rock and Roll?",
-        "options": [
-            "Elvis Presley",
-            "Frank Sinatra",
-            "Chuck Berry",
-            "Buddy Holly"
-        ],
-        "correct": 0,
-        "answer": "Elvis Presley",
-        "category": "1950S Trivia Questions"
-    },
-    {
-        "question": "What was the name of the iconic 1950s hairstyle featuring a ducktail at the back?",
-        "options": [
-            "Beehive",
-            "Pompadour",
-            "Ducktail",
-            "Bouffant"
-        ],
-        "correct": 2,
-        "answer": "Ducktail",
-        "category": "1950S Trivia Questions"
-    },
-    {
-        "question": "Which American car brand introduced the Corvette in 1953?",
-        "options": [
-            "Ford",
-            "Chevrolet",
-            "Dodge",
-            "Buick"
-        ],
-        "correct": 1,
-        "answer": "Chevrolet",
-        "category": "1950S Trivia Questions"
-    },
-    {
-        "question": "What type of movie theater became popular in the 1950s?",
-        "options": [
-            "Drive-in",
-            "Multiplex",
-            "IMAX",
-            "Single-screen theater"
-        ],
-        "correct": 0,
-        "answer": "Drive-in",
-        "category": "1950S Trivia Questions"
     },
     {
         "question": "Which famous comedic actor celebrated his 55th birthday on August 17, 1945?",
