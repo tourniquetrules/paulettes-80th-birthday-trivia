@@ -93,6 +93,7 @@ def generate_questions_js():
     questions_dir = Path(__file__).parent / 'questions'
     all_questions = []
     categories = {}
+    seen_questions = set()  # Track duplicate questions
     
     if not questions_dir.exists():
         print("Questions directory not found!")
@@ -105,14 +106,24 @@ def generate_questions_js():
         
         if questions:
             category = get_category_from_filename(md_file.name)
-            categories[category] = len(questions)
             
-            # Add category info to each question
+            # Remove duplicates and add category info
+            unique_questions = []
             for question in questions:
-                question['category'] = category
+                question_text = question['question'].lower().strip()
+                if question_text not in seen_questions:
+                    seen_questions.add(question_text)
+                    question['category'] = category
+                    unique_questions.append(question)
+                else:
+                    print(f"  Skipped duplicate: {question['question'][:50]}...")
             
-            all_questions.extend(questions)
-            print(f"  Found {len(questions)} questions")
+            if unique_questions:
+                categories[category] = len(unique_questions)
+                all_questions.extend(unique_questions)
+                print(f"  Found {len(unique_questions)} unique questions")
+            else:
+                print(f"  All questions were duplicates in {md_file.name}")
         else:
             print(f"  No valid questions found in {md_file.name}")
     
@@ -120,7 +131,7 @@ def generate_questions_js():
         print("No questions found in any files!")
         return
     
-    # Generate JavaScript file
+    # Generate JavaScript file with proper shuffling
     js_content = f"""// Auto-generated trivia questions from markdown files
 // Generated on {__import__('datetime').datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 
@@ -130,6 +141,16 @@ const questionCategories = {json.dumps(categories, indent=4)};
 // All trivia questions
 const triviaQuestions = {json.dumps(all_questions, indent=4)};
 
+// Fisher-Yates shuffle algorithm for proper randomization
+function fisherYatesShuffle(array) {{
+    const shuffled = [...array];
+    for (let i = shuffled.length - 1; i > 0; i--) {{
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }}
+    return shuffled;
+}}
+
 // Get questions by category
 function getQuestionsByCategory(category) {{
     return triviaQuestions.filter(q => q.category === category);
@@ -137,14 +158,14 @@ function getQuestionsByCategory(category) {{
 
 // Get random questions from all categories
 function getRandomQuestions(count = 10) {{
-    const shuffled = [...triviaQuestions].sort(() => 0.5 - Math.random());
+    const shuffled = fisherYatesShuffle(triviaQuestions);
     return shuffled.slice(0, count);
 }}
 
 // Get random questions from specific categories
 function getRandomQuestionsFromCategories(categories, count = 10) {{
     const filteredQuestions = triviaQuestions.filter(q => categories.includes(q.category));
-    const shuffled = [...filteredQuestions].sort(() => 0.5 - Math.random());
+    const shuffled = fisherYatesShuffle(filteredQuestions);
     return shuffled.slice(0, count);
 }}
 """

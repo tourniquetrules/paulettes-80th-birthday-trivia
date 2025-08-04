@@ -120,9 +120,34 @@ class TriviaGame {
             }
         }
         
-        // Shuffle and select 10 questions
-        const shuffled = [...availableQuestions].sort(() => 0.5 - Math.random());
+        // Remove duplicates based on question text
+        const uniqueQuestions = this.removeDuplicateQuestions(availableQuestions);
+        
+        // Properly shuffle using Fisher-Yates algorithm
+        const shuffled = this.fisherYatesShuffle([...uniqueQuestions]);
         return shuffled.slice(0, Math.min(10, shuffled.length));
+    }
+
+    // Fisher-Yates shuffle algorithm for truly random shuffling
+    fisherYatesShuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    // Remove duplicate questions based on question text
+    removeDuplicateQuestions(questions) {
+        const seen = new Set();
+        return questions.filter(question => {
+            const questionText = question.question.toLowerCase().trim();
+            if (seen.has(questionText)) {
+                return false;
+            }
+            seen.add(questionText);
+            return true;
+        });
     }
 
     displayQuestion() {
