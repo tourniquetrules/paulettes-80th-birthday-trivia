@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paulette's 80th Birthday Trivia Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="confetti-container"></div>
+    
+    <div class="game-container">
+        <!-- Welcome Screen -->
+        <div id="welcome-screen" class="screen active">
+            <div class="celebration-header">
+                <h1>🎉 Happy 80th Birthday Paulette! 🎂</h1>
+                <h2>Multi-Decade Trivia Challenge</h2>
+            </div>
+            <div class="birthday-decorations">
+                <div class="balloon balloon-1">🎈</div>
+                <div class="balloon balloon-2">🎈</div>
+                <div class="balloon balloon-3">🎈</div>
+            </div>
+            <p class="welcome-text">Test your knowledge across multiple decades!</p>
+            <div id="category-info" class="category-info">
+                <!-- Category information will be loaded here -->
+            </div>
+            
+            <div class="category-selection">
+                <h3>Choose Your Challenge:</h3>
+                <div id="category-buttons" class="category-buttons">
+                    <!-- Category buttons will be loaded here -->
+                </div>
+            </div>
+            <button id="view-scores" class="btn btn-secondary">View Scoreboard 📊</button>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="screen">
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+                <span id="question-counter" class="question-counter">Question 1 of 10</span>
+            </div>
+            
+            <div class="question-container">
+                <h3 id="question-text" class="question-text"></h3>
+                <div id="options-container" class="options-container">
+                    <!-- Options will be dynamically inserted here -->
+                </div>
+            </div>
+            
+            <div id="feedback-container" class="feedback-container hidden">
+                <div id="feedback-message" class="feedback-message"></div>
+                <div id="answer-stats" class="answer-stats"></div>
+                <button id="next-question" class="btn btn-primary">Next Question ➡️</button>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="screen">
+            <div class="results-header">
+                <h2>🎊 Quiz Complete! 🎊</h2>
+                <div id="final-score" class="final-score"></div>
+                <div id="score-message" class="score-message"></div>
+            </div>
+            
+            <div class="name-entry">
+                <h3>Enter your name for the scoreboard:</h3>
+                <input type="text" id="player-name" placeholder="Your name" maxlength="20">
+                <button id="submit-score" class="btn btn-primary">Submit Score 📝</button>
+            </div>
+            
+            <div class="results-actions">
+                <button id="play-again" class="btn btn-secondary">Play Again 🔄</button>
+                <button id="view-scores-results" class="btn btn-secondary">View Scoreboard 📊</button>
+            </div>
+        </div>
+
+        <!-- Scoreboard Screen -->
+        <div id="scoreboard-screen" class="screen">
+            <div class="scoreboard-header">
+                <h2>🏆 Birthday Party Scoreboard 🏆</h2>
+            </div>
+            
+            <div id="scoreboard-content" class="scoreboard-content">
+                <!-- Scoreboard will be dynamically generated -->
+            </div>
+            
+            <div class="scoreboard-actions">
+                <button id="back-to-welcome" class="btn btn-primary">Back to Game 🎮</button>
+                <button id="clear-scores" class="btn btn-danger">Clear All Scores 🗑️</button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="correct-sound" preload="auto">
+        <source src="sounds/correct.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="wrong-sound" preload="auto">
+        <source src="sounds/wrong.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="celebration-sound" preload="auto">
+        <source src="sounds/celebration.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="questions.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
