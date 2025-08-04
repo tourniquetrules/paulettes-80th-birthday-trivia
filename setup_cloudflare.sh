@@ -118,7 +118,7 @@ credentials-file: ~/.cloudflared/$TUNNEL_ID.json
 
 ingress:
   - hostname: paulette.haydd.com
-    service: http://localhost:8090
+    service: http://localhost:8000
   - service: http_status:404
 EOF
 
