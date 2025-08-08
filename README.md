@@ -1,34 +1,34 @@
-# 🎉 Paulette's 80th Birthday Trivia Game 🎂
+# 🎉 August 17th Trivia Challenge 🎂
 
-A personalized, mobile-friendly trivia game created for Paulette's 80th birthday celebration. The game features questions spanning multiple decades and is accessible worldwide via Cloudflare tunnel at [paulette.haydd.com](https://paulette.haydd.com).
+A personalized, mobile-friendly trivia game featuring 100 historically accurate questions about events that happened on August 17th throughout history. Created for Paulette's 80th birthday celebration and accessible worldwide at [trivia.haydd.com](https://trivia.haydd.com).
 
-![Birthday Game Screenshot](https://img.shields.io/badge/Birthday-80th%20Celebration-ff69b4)
+![Birthday Game Screenshot](https://img.shields.io/badge/Birthday-80th%20Celebration-ff9a56)
 ![Status](https://img.shields.io/badge/Status-Live-brightgreen)
-![Questions](https://img.shields.io/badge/Questions-176-blue)
+![Questions](https://img.shields.io/badge/Questions-100-orange)
 
 ## 🎮 Live Game
 
-**Play now:** [https://paulette.haydd.com](https://paulette.haydd.com)
+**Play now:** [https://trivia.haydd.com](https://trivia.haydd.com)
 
 ## ✨ Features
 
-- 🎂 **Personalized**: Custom birthday theme for Paulette's 80th
+- 🎂 **Personalized**: Custom theme for Paulette's 80th birthday celebration
 - 📱 **Mobile-First**: Optimized for phones and tablets
-- 🎲 **Multiple Categories**: 
-  - 1940s Trivia Questions (26 questions)
-  - 1950s Trivia Questions (100 questions)  
-  - August 1945 Pop Culture Questions (50 questions)
-- 🎯 **Category Selection**: Choose specific decades or mix all categories
+- 🎲 **Historical Focus**: 
+  - 100 August 17th historical questions spanning over 2000 years
+  - Events from ancient Rome to modern times  
+  - Verified for historical accuracy
+- 🎯 **Educational**: Learn about significant events that happened on August 17th
 - 📊 **Live Statistics**: See popular answers after each question
 - 🏆 **Live Scoreboard**: Real-time competition tracking
-- 🎨 **Birthday Theme**: Balloons, confetti, and festive animations
+- 🎨 **Autumn Theme**: Warm orange and golden color scheme with festive animations
 - 🌐 **Global Access**: Available worldwide via Cloudflare tunnel
 - 💾 **Persistent Data**: Scores and stats saved between sessions
 
 ## 🚀 Quick Start
 
 ### Option 1: Use the Live Version
-Simply visit [paulette.haydd.com](https://paulette.haydd.com) - no setup required!
+Simply visit [trivia.haydd.com](https://trivia.haydd.com) - no setup required!
 
 ### Option 2: Run Locally
 
