@@ -6,17 +6,20 @@ class TriviaGame {
         this.playerAnswers = [];
         this.score = 0;
         this.selectedCategory = 'all'; // 'all' or specific category name
-        this.answerStats = JSON.parse(localStorage.getItem('answerStats')) || {};
-        this.scoreboard = JSON.parse(localStorage.getItem('scoreboard')) || [];
+        this.answerStats = {}; // Will be loaded from server
+        this.scoreboard = []; // Will be loaded from server
         
         this.initializeEventListeners();
         this.createConfetti();
         this.displayCategoryInfo();
+        this.loadScoreboard(); // Load scoreboard from server
+        this.loadAnswerStats(); // Load answer stats from server
     }
 
     initializeEventListeners() {
         // Welcome screen buttons
         document.getElementById('view-scores').addEventListener('click', () => this.showScoreboard());
+        document.getElementById('start-game').addEventListener('click', () => this.startGame());
 
         // Game screen buttons
         document.getElementById('next-question').addEventListener('click', () => this.nextQuestion());
@@ -42,41 +45,15 @@ class TriviaGame {
         const categoryInfoElement = document.getElementById('category-info');
         const categoryButtonsElement = document.getElementById('category-buttons');
         
-        if (typeof questionCategories === 'undefined') {
-            categoryInfoElement.innerHTML = '<p class="total-questions">Trivia questions loaded!</p>';
-            categoryButtonsElement.innerHTML = '<button class="category-btn all-categories" onclick="game.startGame(\'all\')">Start Playing! 🎮</button>';
-            return;
-        }
-        
-        const totalQuestions = Object.values(questionCategories).reduce((sum, count) => sum + count, 0);
-        
-        // Display category information
-        let html = '<h4>Available Question Categories:</h4>';
-        html += '<div class="category-list">';
-        
-        for (const [category, count] of Object.entries(questionCategories)) {
-            html += `<span class="category-item">${category} (${count})</span>`;
-        }
-        
-        html += '</div>';
-        html += `<p class="total-questions">Total: ${totalQuestions} questions available!</p>`;
-        
-        categoryInfoElement.innerHTML = html;
-        
-        // Create category selection buttons
-        let buttonsHtml = '<button class="category-btn all-categories" onclick="game.startGame(\'all\')">🌟 All Categories (Random Mix) 🌟</button>';
-        
-        for (const [category, count] of Object.entries(questionCategories)) {
-            const buttonText = `${category} (${count} questions)`;
-            buttonsHtml += `<button class="category-btn" onclick="game.startGame('${category}')">${buttonText}</button>`;
-        }
-        
-        categoryButtonsElement.innerHTML = buttonsHtml;
+        // Calculate total questions dynamically
+        const totalQuestions = typeof triviaQuestions !== 'undefined' ? triviaQuestions.length : 50;
+        categoryInfoElement.innerHTML = `<p class="total-questions">${totalQuestions} trivia questions available - Each game uses 10 random selections!</p>`;
+        categoryButtonsElement.innerHTML = '<button class="category-btn all-categories" onclick="game.startGame(\'all\')">Start Playing! 🎮</button>';
     }
 
     createConfetti() {
         const container = document.querySelector('.confetti-container');
-        const colors = ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3', '#54a0ff'];
+        const colors = ['#f39c12', '#e67e22', '#d35400', '#e74c3c', '#c0392b', '#ff9a56', '#ff6b35'];
         
         for (let i = 0; i < 50; i++) {
             const confetti = document.createElement('div');
@@ -89,36 +66,19 @@ class TriviaGame {
         }
     }
 
-    startGame(category = 'all') {
+    startGame() {
         this.currentQuestionIndex = 0;
         this.playerAnswers = [];
         this.score = 0;
-        this.selectedCategory = category;
-        this.selectedQuestions = this.selectRandomQuestions(category);
+        this.selectedQuestions = this.selectRandomQuestions();
         
         this.showScreen('game-screen');
         this.displayQuestion();
     }
 
-    selectRandomQuestions(category = 'all') {
-        let availableQuestions = [];
-        
-        if (category === 'all') {
-            // Use all questions from all categories
-            if (typeof getRandomQuestions === 'function') {
-                return getRandomQuestions(10);
-            } else {
-                availableQuestions = [...triviaQuestions];
-            }
-        } else {
-            // Use questions from specific category
-            if (typeof getQuestionsByCategory === 'function') {
-                availableQuestions = getQuestionsByCategory(category);
-            } else {
-                // Fallback: filter questions by category if available
-                availableQuestions = triviaQuestions.filter(q => q.category === category);
-            }
-        }
+    selectRandomQuestions() {
+        // Always use all available questions (August 1945 trivia)
+        let availableQuestions = [...triviaQuestions];
         
         // Remove duplicates based on question text
         const uniqueQuestions = this.removeDuplicateQuestions(availableQuestions);
@@ -192,6 +152,9 @@ class TriviaGame {
         const question = this.selectedQuestions[this.currentQuestionIndex];
         const options = document.querySelectorAll('.option');
         
+        // Find the correct answer index by matching the text
+        const correctIndex = question.options.findIndex(option => option === question.correct);
+        
         // Disable all options
         options.forEach(option => {
             option.classList.add('disabled');
@@ -199,9 +162,11 @@ class TriviaGame {
         });
         
         // Mark correct and incorrect answers
-        options[question.correct].classList.add('correct', 'animate-correct');
+        if (correctIndex >= 0) {
+            options[correctIndex].classList.add('correct', 'animate-correct');
+        }
         
-        if (selectedIndex !== question.correct) {
+        if (selectedIndex !== correctIndex) {
             options[selectedIndex].classList.add('incorrect', 'animate-incorrect');
             this.playSound('wrong-sound');
         } else {
@@ -216,12 +181,19 @@ class TriviaGame {
         this.playerAnswers.push({
             question: question.question,
             selected: selectedIndex,
-            correct: question.correct,
-            isCorrect: selectedIndex === question.correct
+            correct: correctIndex,
+            isCorrect: selectedIndex === correctIndex
         });
         
         // Show feedback
-        this.showFeedback(selectedIndex === question.correct, question);
+        this.showFeedback(selectedIndex === correctIndex, question);
+        
+        // Force show the feedback container
+        setTimeout(() => {
+            const feedbackContainer = document.getElementById('feedback-container');
+            feedbackContainer.classList.remove('hidden');
+            feedbackContainer.style.display = 'block';
+        }, 100);
     }
 
     recordAnswer(questionText, answerIndex) {
@@ -229,7 +201,7 @@ class TriviaGame {
             this.answerStats[questionText] = [0, 0, 0, 0];
         }
         this.answerStats[questionText][answerIndex]++;
-        localStorage.setItem('answerStats', JSON.stringify(this.answerStats));
+        this.saveAnswerStats();
     }
 
     showFeedback(isCorrect, question) {
@@ -247,7 +219,7 @@ class TriviaGame {
         } else {
             feedbackContainer.classList.add('incorrect');
             feedbackMessage.classList.add('incorrect');
-            feedbackMessage.textContent = `❌ Incorrect. The answer was: ${question.answer}`;
+            feedbackMessage.textContent = `❌ Incorrect. The answer was: ${question.correct}`;
         }
         
         // Show answer statistics
@@ -312,7 +284,7 @@ class TriviaGame {
         }, 100);
     }
 
-    submitScore() {
+    async submitScore() {
         const playerName = document.getElementById('player-name').value.trim();
         
         if (!playerName) {
@@ -320,23 +292,52 @@ class TriviaGame {
             return;
         }
         
-        const scoreEntry = {
-            name: playerName,
-            score: this.score,
-            date: new Date().toLocaleDateString(),
-            time: new Date().toLocaleTimeString()
-        };
-        
-        this.scoreboard.push(scoreEntry);
-        this.scoreboard.sort((a, b) => b.score - a.score); // Sort by highest score
-        
-        localStorage.setItem('scoreboard', JSON.stringify(this.scoreboard));
-        
-        this.showScoreboard();
+        try {
+            const response = await fetch('/api/scores', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    name: playerName,
+                    score: this.score
+                })
+            });
+            
+            const result = await response.json();
+            
+            if (result.status === 'success') {
+                this.scoreboard = result.scores;
+                this.showScoreboard();
+            } else {
+                alert('Error saving score: ' + result.message);
+            }
+        } catch (error) {
+            console.error('Error submitting score:', error);
+            alert('Error saving score. Please try again.');
+        }
     }
 
-    showScoreboard() {
+    async loadScoreboard() {
+        try {
+            const response = await fetch('/api/scores');
+            const result = await response.json();
+            
+            if (result.status === 'success') {
+                this.scoreboard = result.scores;
+            }
+        } catch (error) {
+            console.error('Error loading scoreboard:', error);
+            // Fall back to localStorage if server fails
+            this.scoreboard = JSON.parse(localStorage.getItem('scoreboard')) || [];
+        }
+    }
+
+    async showScoreboard() {
         this.showScreen('scoreboard-screen');
+        
+        // Load fresh scoreboard data
+        await this.loadScoreboard();
         
         const scoreboardContent = document.getElementById('scoreboard-content');
         
@@ -353,11 +354,49 @@ class TriviaGame {
                     <span class="player-rank">#${index + 1}</span>
                     <span class="player-name">${entry.name}</span>
                     <span class="player-score">${entry.score}/10</span>
+                    <span class="player-date">${entry.date}</span>
                 </div>
             `;
         });
         
         scoreboardContent.innerHTML = html;
+    }
+
+    async loadAnswerStats() {
+        try {
+            const response = await fetch('/api/stats');
+            const data = await response.json();
+            
+            if (data.status === 'success') {
+                this.answerStats = data.stats;
+            } else {
+                console.error('Failed to load answer stats:', data.message);
+                this.answerStats = {};
+            }
+        } catch (error) {
+            console.error('Error loading answer stats:', error);
+            this.answerStats = {};
+        }
+    }
+
+    async saveAnswerStats() {
+        try {
+            const response = await fetch('/api/stats', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(this.answerStats)
+            });
+            
+            const data = await response.json();
+            
+            if (data.status !== 'success') {
+                console.error('Failed to save answer stats:', data.message);
+            }
+        } catch (error) {
+            console.error('Error saving answer stats:', error);
+        }
     }
 
     resetGame() {
@@ -369,13 +408,30 @@ class TriviaGame {
         this.showScreen('welcome-screen');
     }
 
-    clearScores() {
+    async clearScores() {
         if (confirm('Are you sure you want to clear all scores? This cannot be undone.')) {
-            this.scoreboard = [];
-            this.answerStats = {};
-            localStorage.removeItem('scoreboard');
-            localStorage.removeItem('answerStats');
-            this.showScoreboard();
+            try {
+                const response = await fetch('/api/scores', {
+                    method: 'DELETE'
+                });
+                
+                const result = await response.json();
+                
+                if (result.status === 'success') {
+                    this.scoreboard = [];
+                    
+                    // Also clear answer stats from server
+                    await fetch('/api/stats', { method: 'DELETE' });
+                    this.answerStats = {};
+                    
+                    this.showScoreboard();
+                } else {
+                    alert('Error clearing scores: ' + result.message);
+                }
+            } catch (error) {
+                console.error('Error clearing scores:', error);
+                alert('Error clearing scores. Please try again.');
+            }
         }
     }
 

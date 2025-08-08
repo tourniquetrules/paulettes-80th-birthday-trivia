@@ -1,952 +1,605 @@
-// Auto-generated trivia questions from markdown files
-// Generated on 2025-08-04 17:09:46
+// Auto-generated from 100questions.md
+// Generated on: 100 questions total
 
-// Question categories and counts
-const questionCategories = {
-    "1940S Trivia Questions": 26,
-    "August 1945 Pop Culture Questions": 50
-};
-
-// All trivia questions
 const triviaQuestions = [
     {
-        "question": "What major global conflict dominated the early 1940s?",
-        "options": [
-            "World War I",
-            "World War II",
-            "The Korean War",
-            "The Vietnam War"
-        ],
-        "correct": 1,
-        "answer": "World War II",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Who was the President of the United States for most of the 1940s?",
-        "options": [
-            "Franklin D. Roosevelt",
-            "Harry S. Truman",
-            "Dwight D. Eisenhower",
-            "Theodore Roosevelt"
-        ],
-        "correct": 0,
-        "answer": "Franklin D. Roosevelt",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which country dropped the first atomic bombs in warfare in 1945?",
-        "options": [
-            "United States",
-            "Germany",
-            "Japan",
-            "Soviet Union"
-        ],
-        "correct": 0,
-        "answer": "United States",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "In which year did World War II end?",
-        "options": [
-            "1942",
-            "1944",
-            "1945",
-            "1946"
-        ],
-        "correct": 2,
-        "answer": "1945",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which event prompted the United States to enter World War II?",
-        "options": [
-            "Pearl Harbor attack",
-            "D-Day invasion",
-            "Battle of Midway",
-            "Battle of Stalingrad"
-        ],
-        "correct": 0,
-        "answer": "Pearl Harbor attack",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which country was invaded by Nazi Germany in 1941, breaking their non-aggression pact?",
-        "options": [
-            "Poland",
-            "France",
-            "Soviet Union",
-            "United Kingdom"
-        ],
-        "correct": 2,
-        "answer": "Soviet Union",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "What was the name of the plan to rebuild Europe after World War II?",
-        "options": [
-            "Marshall Plan",
-            "Truman Doctrine",
-            "New Deal",
-            "Lend-Lease"
-        ],
-        "correct": 0,
-        "answer": "Marshall Plan",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which famous trial prosecuted Nazi leaders for war crimes in the late 1940s?",
-        "options": [
-            "Nuremberg Trials",
-            "Tokyo Trials",
-            "Geneva Convention",
-            "Yalta Conference"
-        ],
-        "correct": 0,
-        "answer": "Nuremberg Trials",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Who became the first woman to fly solo across the Atlantic in 1942?",
-        "options": [
-            "Amelia Earhart",
-            "Harriet Quimby",
-            "Jean Batten",
-            "Jacqueline Cochran"
-        ],
-        "correct": 3,
-        "answer": "Jacqueline Cochran",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "What was the name of the international organization formed in 1945 to promote peace?",
-        "options": [
-            "United Nations",
-            "League of Nations",
-            "NATO",
-            "Warsaw Pact"
-        ],
-        "correct": 0,
-        "answer": "United Nations",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which 1947 event marked the beginning of the Cold War tensions?",
-        "options": [
-            "Truman Doctrine announcement",
-            "Berlin Airlift",
-            "Korean War",
-            "Vietnam War"
-        ],
-        "correct": 0,
-        "answer": "Truman Doctrine announcement",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Who was the British Prime Minister during most of World War II?",
-        "options": [
-            "Winston Churchill",
-            "Neville Chamberlain",
-            "Clement Attlee",
-            "Anthony Eden"
-        ],
-        "correct": 0,
-        "answer": "Winston Churchill",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which 1940s fashion style was popularized by women working in factories during the war?",
-        "options": [
-            "Flapper dresses",
-            "Zoot suits",
-            "Rosie the Riveter style",
-            "Hippie clothing"
-        ],
-        "correct": 2,
-        "answer": "Rosie the Riveter style",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "What was the nickname given to the American soldiers during World War II?",
-        "options": [
-            "Doughboys",
-            "G.I. Joes",
-            "Tommy",
-            "Yankees"
-        ],
-        "correct": 1,
-        "answer": "G.I. Joes",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which country was divided into occupation zones after World War II?",
-        "options": [
-            "Germany",
-            "France",
-            "Italy",
-            "Japan"
-        ],
-        "correct": 0,
-        "answer": "Germany",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which 1940s invention revolutionized communication by enabling long-distance calls?",
-        "options": [
-            "Telegraph",
-            "Radio",
-            "Transistor radio",
-            "Telephone switchboard"
-        ],
-        "correct": 2,
-        "answer": "Transistor radio",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "What famous 1949 military alliance was formed by Western countries?",
-        "options": [
-            "NATO",
-            "Warsaw Pact",
-            "United Nations",
-            "SEATO"
-        ],
-        "correct": 0,
-        "answer": "NATO",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Who was the famous jazz musician known as 'The King of Swing' in the 1940s?",
-        "options": [
-            "Duke Ellington",
-            "Louis Armstrong",
-            "Benny Goodman",
-            "Count Basie"
-        ],
-        "correct": 2,
-        "answer": "Benny Goodman",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which 1940s movie featured the famous line, 'Here's looking at you, kid'?",
-        "options": [
-            "Gone with the Wind",
-            "Casablanca",
-            "The Maltese Falcon",
-            "Citizen Kane"
-        ],
-        "correct": 1,
-        "answer": "Casablanca",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which British monarch reigned during the entire 1940s?",
-        "options": [
-            "King George V",
-            "King Edward VIII",
-            "King George VI",
-            "Queen Elizabeth II"
-        ],
-        "correct": 2,
-        "answer": "King George VI",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which scientific breakthrough related to medicine was first widely used in the 1940s?",
-        "options": [
-            "Penicillin",
-            "Insulin",
-            "X-rays",
-            "Polio vaccine"
-        ],
-        "correct": 0,
-        "answer": "Penicillin",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which conflict started in 1948, involving the establishment of the state of Israel?",
-        "options": [
-            "Six-Day War",
-            "Yom Kippur War",
-            "Arab-Israeli War",
-            "Suez Crisis"
-        ],
-        "correct": 2,
-        "answer": "Arab-Israeli War",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which famous author published '1984' in 1949?",
-        "options": [
-            "Aldous Huxley",
-            "George Orwell",
-            "J.D. Salinger",
-            "Ernest Hemingway"
-        ],
-        "correct": 1,
-        "answer": "George Orwell",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which major technological advancement in computing began development in the 1940s?",
-        "options": [
-            "The Internet",
-            "ENIAC computer",
-            "Personal computers",
-            "Mobile phones"
-        ],
-        "correct": 1,
-        "answer": "ENIAC computer",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which 1941 naval battle was a turning point in the Pacific theater of WWII?",
-        "options": [
-            "Battle of Midway",
-            "Battle of Coral Sea",
-            "Battle of Leyte Gulf",
-            "Battle of Guadalcanal"
-        ],
-        "correct": 0,
-        "answer": "Battle of Midway",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which American general led the D-Day invasion in 1944?",
-        "options": [
-            "Dwight D. Eisenhower",
-            "Douglas MacArthur",
-            "George Patton",
-            "Omar Bradley"
-        ],
-        "correct": 0,
-        "answer": "Dwight D. Eisenhower",
-        "category": "1940S Trivia Questions"
-    },
-    {
-        "question": "Which famous comedic actor celebrated his 55th birthday on August 17, 1945?",
-        "options": [
-            "Charlie Chaplin",
-            "Buster Keaton",
-            "Stan Laurel",
-            "Oliver Hardy"
-        ],
-        "correct": 0,
-        "answer": "Charlie Chaplin",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which actress famous for portraying Dorothy in 'The Wizard of Oz' celebrated her 23rd birthday in June 1945?",
-        "options": [
-            "Judy Garland",
-            "Shirley Temple",
-            "Marilyn Monroe",
-            "Audrey Hepburn"
-        ],
-        "correct": 0,
-        "answer": "Judy Garland",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which popular American singer known as 'Ol' Blue Eyes' turned 30 in December 1945?",
-        "options": [
-            "Dean Martin",
-            "Frank Sinatra",
-            "Bing Crosby",
-            "Perry Como"
-        ],
-        "correct": 1,
-        "answer": "Frank Sinatra",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which famous baseball player hit his 500th home run on August 11, 1945?",
-        "options": [
-            "Babe Ruth",
-            "Lou Gehrig",
-            "Ted Williams",
-            "Mel Ott"
-        ],
-        "correct": 3,
-        "answer": "Mel Ott",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which prominent jazz musician known for 'Take the A Train' turned 46 in April 1945?",
-        "options": [
-            "Louis Armstrong",
-            "Duke Ellington",
-            "Count Basie",
-            "Benny Goodman"
-        ],
-        "correct": 1,
-        "answer": "Duke Ellington",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which cartoon character made by Walter Lantz was popular in theaters during the summer of 1945?",
-        "options": [
-            "Bugs Bunny",
-            "Woody Woodpecker",
-            "Mickey Mouse",
-            "Popeye"
-        ],
-        "correct": 1,
-        "answer": "Woody Woodpecker",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which famous film noir starring Joan Crawford was released in August 1945?",
-        "options": [
-            "Double Indemnity",
-            "Mildred Pierce",
-            "The Big Sleep",
-            "The Maltese Falcon"
-        ],
-        "correct": 1,
-        "answer": "Mildred Pierce",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which legendary singer known for 'White Christmas' was topping charts in 1945?",
-        "options": [
-            "Frank Sinatra",
-            "Bing Crosby",
-            "Dean Martin",
-            "Nat King Cole"
-        ],
-        "correct": 1,
-        "answer": "Bing Crosby",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which famous actress celebrated her 16th birthday on August 17, 1945, later known for roles in 'Valley of the Dolls'?",
-        "options": [
-            "Judy Garland",
-            "Patty Duke",
-            "Sharon Tate",
-            "Barbara Parkins"
-        ],
-        "correct": 2,
-        "answer": "Sharon Tate",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which candy bar, originally named 'Kandy Kake', gained popularity post-1945?",
-        "options": [
-            "Snickers",
-            "Twix",
-            "Baby Ruth",
-            "Kit Kat"
-        ],
-        "correct": 2,
-        "answer": "Baby Ruth",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "What iconic 1945 musical film featured Gene Kelly and Frank Sinatra as sailors on shore leave?",
-        "options": [
-            "Singin' in the Rain",
-            "Anchors Aweigh",
-            "On the Town",
-            "An American in Paris"
-        ],
-        "correct": 1,
-        "answer": "Anchors Aweigh",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which actress famous for her comedic television roles was born on August 6, 1945?",
-        "options": [
-            "Lucille Ball",
-            "Carol Burnett",
-            "Catherine Hicks",
-            "Loni Anderson"
-        ],
-        "correct": 2,
-        "answer": "Catherine Hicks",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which influential jazz saxophonist, associated with bebop, was performing in New York City clubs in August 1945?",
-        "options": [
-            "John Coltrane",
-            "Charlie Parker",
-            "Stan Getz",
-            "Coleman Hawkins"
-        ],
-        "correct": 1,
-        "answer": "Charlie Parker",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which popular soft drink introduced its slogan 'The Pause That Refreshes' in the mid-1940s?",
-        "options": [
-            "Coca-Cola",
-            "Pepsi",
-            "Dr Pepper",
-            "7-Up"
-        ],
-        "correct": 0,
-        "answer": "Coca-Cola",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "What famous children's toy, involving metal coils, gained massive popularity starting in 1945?",
-        "options": [
-            "Slinky",
-            "Yo-Yo",
-            "Frisbee",
-            "Hula Hoop"
-        ],
-        "correct": 0,
-        "answer": "Slinky",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "What comic strip featuring a dog named Snoopy was nearing creation around August 1945?",
-        "options": [
-            "Garfield",
-            "Peanuts",
-            "Marmaduke",
-            "Dennis the Menace"
-        ],
-        "correct": 1,
-        "answer": "Peanuts",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which popular radio detective series featuring Dick Powell premiered in 1945?",
-        "options": [
-            "Dragnet",
-            "Richard Diamond, Private Detective",
-            "The Shadow",
-            "Sam Spade"
-        ],
-        "correct": 1,
-        "answer": "Richard Diamond, Private Detective",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "What American actress known for the film 'The Birds' celebrated her 15th birthday on August 19, 1945?",
-        "options": [
-            "Grace Kelly",
-            "Tippi Hedren",
-            "Audrey Hepburn",
-            "Natalie Wood"
-        ],
-        "correct": 1,
-        "answer": "Tippi Hedren",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which popular breakfast cereal, initially called 'CheeriOats', was growing rapidly in popularity in 1945?",
-        "options": [
-            "Frosted Flakes",
-            "Cheerios",
-            "Corn Flakes",
-            "Rice Krispies"
-        ],
-        "correct": 1,
-        "answer": "Cheerios",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which influential guitarist known for his electric guitar techniques turned 30 in June 1945?",
-        "options": [
-            "Les Paul",
-            "Chuck Berry",
-            "Jimi Hendrix",
-            "B.B. King"
-        ],
-        "correct": 0,
-        "answer": "Les Paul",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "What widely popular comic book superheroine debuted in comics just a few years before 1945?",
-        "options": [
-            "Supergirl",
-            "Wonder Woman",
-            "Batgirl",
-            "Invisible Woman"
-        ],
-        "correct": 1,
-        "answer": "Wonder Woman",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which actress, known for portraying Morticia Addams, celebrated her 15th birthday in August 1945?",
-        "options": [
-            "Carolyn Jones",
-            "Yvonne De Carlo",
-            "Elizabeth Montgomery",
-            "Barbara Eden"
-        ],
-        "correct": 0,
-        "answer": "Carolyn Jones",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which musical duo famous for comedy skits like 'Who's on First?' were popular during the mid-1940s?",
-        "options": [
-            "Laurel and Hardy",
-            "Abbott and Costello",
-            "Martin and Lewis",
-            "Burns and Allen"
-        ],
-        "correct": 1,
-        "answer": "Abbott and Costello",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which American novelist, author of 'Carrie', was born in 1947 but conceived shortly after August 1945?",
-        "options": [
-            "Stephen King",
-            "John Grisham",
-            "Dean Koontz",
-            "Michael Crichton"
-        ],
-        "correct": 0,
-        "answer": "Stephen King",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which famous dance craze popularized by Cuban musicians hit mainstream popularity in American nightclubs around 1945?",
-        "options": [
-            "Tango",
-            "Cha-cha-cha",
-            "Rumba",
-            "Salsa"
-        ],
-        "correct": 2,
-        "answer": "Rumba",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which iconic comic strip featuring a red-haired orphan girl was widely syndicated in newspapers in August 1945?",
-        "options": [
-            "Little Orphan Annie",
-            "Nancy",
-            "Popeye",
-            "Dick Tracy"
-        ],
-        "correct": 0,
-        "answer": "Little Orphan Annie",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which legendary jazz trumpeter, famous for 'Hello Dolly', celebrated his 44th birthday on August 4, 1945?",
-        "options": [
-            "Miles Davis",
-            "Louis Armstrong",
-            "Dizzy Gillespie",
-            "Harry James"
-        ],
-        "correct": 1,
-        "answer": "Louis Armstrong",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which classic board game, originally invented in the 1930s, was popular among American families in August 1945?",
-        "options": [
-            "Monopoly",
-            "Risk",
-            "Scrabble",
-            "Clue"
-        ],
-        "correct": 0,
-        "answer": "Monopoly",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Who was the heavyweight boxing champion of the world in August 1945?",
-        "options": [
-            "Joe Louis",
-            "Rocky Marciano",
-            "Jack Dempsey",
-            "Sugar Ray Robinson"
-        ],
-        "correct": 0,
-        "answer": "Joe Louis",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which notable American poet, known for 'The Road Not Taken', died shortly before August 1945?",
-        "options": [
-            "Robert Frost",
-            "T.S. Eliot",
-            "Walt Whitman",
-            "Ezra Pound"
-        ],
-        "correct": 0,
-        "answer": "Robert Frost",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "What was the primary material used for clothing that experienced shortages around August 1945?",
-        "options": [
-            "Cotton",
-            "Silk",
-            "Nylon",
-            "Wool"
-        ],
-        "correct": 2,
-        "answer": "Nylon",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which legendary actor known for roles like Spartacus celebrated his 29th birthday in December 1945?",
-        "options": [
-            "Kirk Douglas",
-            "Charlton Heston",
-            "Marlon Brando",
-            "Gregory Peck"
-        ],
-        "correct": 0,
-        "answer": "Kirk Douglas",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "What famous American comedian, known for his catchphrase 'You Bet Your Life', was performing extensively in August 1945?",
-        "options": [
-            "Groucho Marx",
-            "Bob Hope",
-            "Jack Benny",
-            "Milton Berle"
-        ],
-        "correct": 0,
-        "answer": "Groucho Marx",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which popular radio comedy featuring a lovable duo was on the air during August 1945?",
-        "options": [
-            "Fibber McGee and Molly",
-            "The Lone Ranger",
-            "Dragnet",
-            "Suspense"
-        ],
-        "correct": 0,
-        "answer": "Fibber McGee and Molly",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which influential abstract artist known for drip painting had begun gaining attention by 1945?",
-        "options": [
-            "Jackson Pollock",
-            "Andy Warhol",
-            "Pablo Picasso",
-            "Salvador Dali"
-        ],
-        "correct": 0,
-        "answer": "Jackson Pollock",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "What style of men's suit, characterized by padded shoulders and wide lapels, was popular in August 1945?",
-        "options": [
-            "Zoot suit",
-            "Leisure suit",
-            "Tailcoat",
-            "Trench coat"
-        ],
-        "correct": 0,
-        "answer": "Zoot suit",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which popular children's animated character appeared regularly in theaters around August 1945?",
-        "options": [
-            "Donald Duck",
-            "Scooby-Doo",
-            "Tom and Jerry",
-            "The Flintstones"
-        ],
-        "correct": 2,
-        "answer": "Tom and Jerry",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which notable female novelist, author of 'Death Comes for the Archbishop', passed away earlier in 1945?",
-        "options": [
-            "Agatha Christie",
-            "Virginia Woolf",
-            "Willa Cather",
-            "Margaret Mitchell"
-        ],
-        "correct": 2,
-        "answer": "Willa Cather",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which famous actress, later known for roles in Hitchcock films, celebrated her 18th birthday in August 1945?",
-        "options": [
-            "Grace Kelly",
-            "Kim Novak",
-            "Janet Leigh",
-            "Doris Day"
-        ],
-        "correct": 2,
-        "answer": "Janet Leigh",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which prominent American playwright, author of 'The Glass Menagerie', was gaining fame around 1945?",
-        "options": [
-            "Tennessee Williams",
-            "Arthur Miller",
-            "Eugene O'Neill",
-            "Edward Albee"
-        ],
-        "correct": 0,
-        "answer": "Tennessee Williams",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "What famous mystery writer created detective Philip Marlowe, popularized in the mid-1940s?",
-        "options": [
-            "Raymond Chandler",
-            "Agatha Christie",
-            "Dashiell Hammett",
-            "Arthur Conan Doyle"
-        ],
-        "correct": 0,
-        "answer": "Raymond Chandler",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which popular American comedian known for USO tours entertained audiences throughout August 1945?",
-        "options": [
-            "Jack Benny",
-            "Bob Hope",
-            "George Burns",
-            "Red Skelton"
-        ],
-        "correct": 1,
-        "answer": "Bob Hope",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which influential American magazine, famous for its photography and journalism, thrived in 1945?",
-        "options": [
-            "Life",
-            "Time",
-            "National Geographic",
-            "The Saturday Evening Post"
-        ],
-        "correct": 0,
-        "answer": "Life",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "What was a widely popular women's hairstyle characterized by rolls and curls during August 1945?",
-        "options": [
-            "Victory rolls",
-            "Bouffant",
-            "Bob",
-            "Beehive"
-        ],
-        "correct": 0,
-        "answer": "Victory rolls",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which famous child actress, known for 'Bright Eyes', celebrated her 17th birthday in 1945?",
-        "options": [
-            "Shirley Temple",
-            "Judy Garland",
-            "Natalie Wood",
-            "Elizabeth Taylor"
-        ],
-        "correct": 0,
-        "answer": "Shirley Temple",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which popular dessert featuring marshmallows, chocolate, and graham crackers was beloved by Americans in 1945?",
-        "options": [
-            "S'mores",
-            "Brownies",
-            "Banana Split",
-            "Ice Cream Sundae"
-        ],
-        "correct": 0,
-        "answer": "S'mores",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which popular big band leader known for 'Moonlight Serenade' was declared missing earlier in the 1940s?",
-        "options": [
-            "Glenn Miller",
-            "Benny Goodman",
-            "Tommy Dorsey",
-            "Duke Ellington"
-        ],
-        "correct": 0,
-        "answer": "Glenn Miller",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "What type of casual pants, introduced during the 1940s, became popular among teenagers by 1945?",
-        "options": [
-            "Blue jeans",
-            "Khakis",
-            "Corduroys",
-            "Chinos"
-        ],
-        "correct": 0,
-        "answer": "Blue jeans",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which American dancer and actor, famous for his graceful dancing with Ginger Rogers, turned 46 in 1945?",
-        "options": [
-            "Gene Kelly",
-            "Fred Astaire",
-            "Bing Crosby",
-            "Danny Kaye"
-        ],
-        "correct": 1,
-        "answer": "Fred Astaire",
-        "category": "August 1945 Pop Culture Questions"
-    },
-    {
-        "question": "Which famous British novelist, author of 'Animal Farm', was widely read during 1945?",
-        "options": [
-            "George Orwell",
-            "Aldous Huxley",
-            "J.R.R. Tolkien",
-            "C.S. Lewis"
-        ],
-        "correct": 0,
-        "answer": "George Orwell",
-        "category": "August 1945 Pop Culture Questions"
+        question: "Which country declared its independence from the Netherlands on August 17, 1945?",
+        options: ["Malaysia", "Indonesia", "Philippines", "Vietnam"],
+        correct: "Indonesia",
+        category: "August 17th History"
+    },
+    {
+        question: "Which country declared its independence from the Netherlands on August 17, 1945?",
+        options: ["Malaysia", "Indonesia", "Philippines", "Vietnam"],
+        correct: "Indonesia",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1909, which famous aviator made the first airplane flight across the English Channel?",
+        options: ["Orville Wright", "Louis Bl\u00e9riot", "Charles Lindbergh", "Amelia Earhart"],
+        correct: "Louis Bl\u00e9riot",
+        category: "August 17th History"
+    },
+    {
+        question: "What major city experienced a devastating earthquake on August 17, 1999?",
+        options: ["Los Angeles", "San Francisco", "Istanbul", "Seattle"],
+        correct: "Istanbul",
+        category: "August 17th History"
+    },
+    {
+        question: "Which jazz musician was actually born on April 25, 1917, not August 17th (this is a trick question)?",
+        options: ["Billie Holiday", "Ella Fitzgerald", "Sarah Vaughan", "None - this is historically inaccurate"],
+        correct: "None - this is historically inaccurate",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1960, which country became independent from France?",
+        options: ["Senegal", "Mali", "Chad", "Central African Republic"],
+        correct: "Mali",
+        category: "August 17th History"
+    },
+    {
+        question: "Which Roman emperor died on August 17, 395 AD, marking the final division of the Roman Empire?",
+        options: ["Theodosius I", "Valentinian II", "Honorius", "Arcadius"],
+        correct: "Theodosius I",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1943, what significant World War II event occurred in Sicily?",
+        options: ["Fall of Palermo to Allied forces", "Axis counterattack launched", "Operation Husky commenced", "Allied forces evacuated"],
+        correct: "Fall of Palermo to Allied forces",
+        category: "August 17th History"
+    },
+    {
+        question: "Which U.S. President was born on August 17, 1874?",
+        options: ["Herbert Hoover", "Calvin Coolidge", "Franklin D. Roosevelt", "Theodore Roosevelt"],
+        correct: "Herbert Hoover",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1998, which U.S. President testified before a grand jury about the Monica Lewinsky scandal?",
+        options: ["George H.W. Bush", "Bill Clinton", "George W. Bush", "Ronald Reagan"],
+        correct: "Bill Clinton",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1973, which Middle Eastern country nationalized its oil industry?",
+        options: ["Saudi Arabia", "Iran", "Iraq", "Kuwait"],
+        correct: "Iran",
+        category: "August 17th History"
+    },
+    {
+        question: "Which volcano began its catastrophic eruption on August 17, 1883?",
+        options: ["Mount St. Helens", "Krakatoa", "Mount Vesuvius", "Mount Fuji"],
+        correct: "Krakatoa",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1982, which African country gained independence from Portugal?",
+        options: ["Mozambique", "Cape Verde", "Angola", "Guinea-Bissau"],
+        correct: "Cape Verde",
+        category: "August 17th History"
+    },
+    {
+        question: "Which aviator set a world altitude record on August 17, 1913?",
+        options: ["Amelia Earhart", "Glenn Curtiss", "Harriet Quimby", "Roland Garros"],
+        correct: "Harriet Quimby",
+        category: "August 17th History"
+    },
+    {
+        question: "Which battle of the Napoleonic Wars ended on August 17, 1812?",
+        options: ["Battle of Borodino", "Battle of Smolensk", "Battle of Maloyaroslavets", "Battle of Polotsk"],
+        correct: "Battle of Smolensk",
+        category: "August 17th History"
+    },
+    {
+        question: "Which countries officially gained independence from British rule on August 17, 1947?",
+        options: ["India and Pakistan", "India only", "Pakistan only", "Bangladesh"],
+        correct: "India and Pakistan",
+        category: "August 17th History"
+    },
+    {
+        question: "Who was crowned King of England on August 17, 1100?",
+        options: ["William the Conqueror", "Henry I", "Richard the Lionheart", "Edward the Confessor"],
+        correct: "Henry I",
+        category: "August 17th History"
+    },
+    {
+        question: "Which inventor known for AC electric systems was actually born on July 10, 1856, not August 17th?",
+        options: ["Nikola Tesla", "Thomas Edison", "Alexander Graham Bell", "This is a trick question - none were born August 17th"],
+        correct: "This is a trick question - none were born August 17th",
+        category: "August 17th History"
+    },
+    {
+        question: "The first modern Olympic Games actually opened on April 6, 1896. What happened on August 17, 1896?",
+        options: ["The Olympics closed", "The marathon was run", "Nothing Olympics-related", "Second Olympics began"],
+        correct: "Nothing Olympics-related",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1971, which NASA mission safely returned to Earth?",
+        options: ["Apollo 15", "Apollo 14", "Apollo 16", "Apollo 17"],
+        correct: "Apollo 15",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1863, which battle of the American Civil War took place?",
+        options: ["Battle of Gettysburg", "Battle of Bristoe Station", "Battle of Chickamauga", "Battle of Vicksburg"],
+        correct: "Battle of Bristoe Station",
+        category: "August 17th History"
+    },
+    {
+        question: "Which artist known for Cubism was born on August 17, 1887?",
+        options: ["Pablo Picasso", "Georges Braque", "Juan Gris", "Henri Matisse"],
+        correct: "Juan Gris",
+        category: "August 17th History"
+    },
+    {
+        question: "The Colosseum in Rome was officially inaugurated on August 17 of which year?",
+        options: ["70 AD", "80 AD", "90 AD", "100 AD"],
+        correct: "80 AD",
+        category: "August 17th History"
+    },
+    {
+        question: "Which city experienced a major flood on August 17, 1903?",
+        options: ["St. Louis", "Paris", "New Orleans", "London"],
+        correct: "St. Louis",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1985, who became the first American woman to win the Wimbledon singles title?",
+        options: ["Chris Evert", "Martina Navratilova", "Hana Mandl\u00edkov\u00e1", "Tracy Austin"],
+        correct: "Hana Mandl\u00edkov\u00e1",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1942, which American author published the novel *The Stranger*?",
+        options: ["Ernest Hemingway", "Albert Camus", "F. Scott Fitzgerald", "John Steinbeck"],
+        correct: "Albert Camus",
+        category: "August 17th History"
+    },
+    {
+        question: "Which famous French painter died on August 17, 1823?",
+        options: ["Eug\u00e8ne Delacroix", "Jacques-Louis David", "Paul C\u00e9zanne", "Claude Monet"],
+        correct: "Jacques-Louis David",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1979, which country became independent from Spain?",
+        options: ["Equatorial Guinea", "Western Sahara", "Belize", "Andorra"],
+        correct: "Equatorial Guinea",
+        category: "August 17th History"
+    },
+    {
+        question: "August 17, 1989, marks the death of which famous American actress known for *Some Like It Hot*?",
+        options: ["Marilyn Monroe", "Audrey Hepburn", "Sugar Ray", "Marilyn Maxwell"],
+        correct: "Marilyn Maxwell",
+        category: "August 17th History"
+    },
+    {
+        question: "Which Italian poet and author of \"The Divine Comedy\" was born on a date in 1265 (sometime between mid-May and mid-June, not August 17th)?",
+        options: ["Petrarch", "Dante Alighieri", "Giovanni Boccaccio", "This question contains a date error"],
+        correct: "This question contains a date error",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1908, which city officially became the capital of the United States?",
+        options: ["New York City", "Washington, D.C.", "Philadelphia", "Boston"],
+        correct: "Washington, D.C.",
+        category: "August 17th History"
+    },
+    {
+        question: "Which Olympic Games officially opened on August 17, 1960?",
+        options: ["Rome", "Tokyo", "Mexico City", "Munich"],
+        correct: "Rome",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1998, which country experienced a major bombing of its U.S. Embassy?",
+        options: ["Kenya", "Tanzania", "Somalia", "Ethiopia"],
+        correct: "Kenya (Nairobi)",
+        category: "August 17th History"
+    },
+    {
+        question: "Which famous English poet died on August 17, 1770?",
+        options: ["William Blake", "William Wordsworth", "Thomas Gray", "Alexander Pope"],
+        correct: "Thomas Gray",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1947, which territory was partitioned resulting in the creation of two countries?",
+        options: ["British India", "British Palestine", "British Malaya", "British Burma"],
+        correct: "British India (Partition into India and Pakistan)",
+        category: "August 17th History"
+    },
+    {
+        question: "Harry S. Truman became President on April 12, 1945, when FDR died. What actually happened on August 17, 1945?",
+        options: ["Truman was sworn in", "World War II ended", "Indonesia declared independence", "Nothing significant with Truman"],
+        correct: "Indonesia declared independence",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1918, which major World War I battle began?",
+        options: ["Battle of Amiens", "Battle of St. Mihiel", "Second Battle of the Marne", "Battle of Belleau Wood"],
+        correct: "Battle of St. Mihiel",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1975, which U.S. president signed legislation creating the Energy Research and Development Administration?",
+        options: ["Richard Nixon", "Gerald Ford", "Jimmy Carter", "Ronald Reagan"],
+        correct: "Gerald Ford",
+        category: "August 17th History"
+    },
+    {
+        question: "Which country celebrates National Day on August 17?",
+        options: ["Indonesia", "Mexico", "South Korea", "Chile"],
+        correct: "Indonesia",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1939, which significant aviation event took place?",
+        options: ["First nonstop transcontinental flight across the U.S.", "First commercial flight by Pan Am", "First scheduled helicopter service started", "Howard Hughes sets transcontinental speed record"],
+        correct: "Howard Hughes sets transcontinental speed record",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1923, which artist famous for *Les Demoiselles d'Avignon* exhibited his work in Paris for the first time?",
+        options: ["Pablo Picasso", "Georges Braque", "Henri Matisse", "Salvador Dal\u00ed"],
+        correct: "Pablo Picasso",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1911, which company was founded that later became a major American automobile manufacturer?",
+        options: ["Ford Motor Company", "General Motors", "Chrysler Corporation", "Hudson Motor Car Company"],
+        correct: "Hudson Motor Car Company",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1962, which American country music singer was born?",
+        options: ["Garth Brooks", "Billy Ray Cyrus", "Alan Jackson", "Dwight Yoakam"],
+        correct: "Billy Ray Cyrus",
+        category: "August 17th History"
+    },
+    {
+        question: "Which major U.S. Supreme Court case was decided on August 17, 1892, addressing railroad regulation?",
+        options: ["Plessy v. Ferguson", "Wabash v. Illinois", "Muller v. Oregon", "Lochner v. New York"],
+        correct: "Wabash v. Illinois",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1947, which musical instrument company was founded in Nashville, Tennessee?",
+        options: ["Gibson", "Fender", "Martin", "Gretsch"],
+        correct: "Fender",
+        category: "August 17th History"
+    },
+    {
+        question: "Which explorer landed in New Guinea on August 17, 1526?",
+        options: ["Ferdinand Magellan", "\u00c1lvaro de Saavedra", "Juan Sebasti\u00e1n Elcano", "Vasco N\u00fa\u00f1ez de Balboa"],
+        correct: "\u00c1lvaro de Saavedra",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1887, which important patent was issued to Thomas Edison?",
+        options: ["Electric light bulb", "Phonograph", "Motion picture camera", "Telegraph"],
+        correct: "Motion picture camera",
+        category: "August 17th History"
+    },
+    {
+        question: "Which important treaty was signed on August 17, 1787?",
+        options: ["Treaty of Paris", "Treaty of Versailles", "Treaty of Fontainebleau", "No major treaty signed this date (Trick question)"],
+        correct: "No major treaty signed this date (Trick question)",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 2017, which country experienced a major earthquake that caused widespread damage?",
+        options: ["Mexico", "Nepal", "Indonesia", "Iran"],
+        correct: "Mexico",
+        category: "August 17th History"
+    },
+    {
+        question: "Which Roman Emperor officially dedicated the Pantheon on August 17, 126 AD?",
+        options: ["Hadrian", "Marcus Aurelius", "Trajan", "Antoninus Pius"],
+        correct: "Hadrian",
+        category: "August 17th History"
+    },
+    {
+        question: "Which battle concluded on August 17, 1812, marking a key moment during Napoleon\u2019s Russian campaign?",
+        options: ["Battle of Smolensk", "Battle of Borodino", "Battle of Maloyaroslavets", "Battle of Polotsk"],
+        correct: "Battle of Smolensk",
+        category: "August 17th History"
+    },
+    {
+        question: "Who was born on August 17, 1899, and is famous for works like *The Old Man and the Sea*?",
+        options: ["Ernest Hemingway", "F. Scott Fitzgerald", "William Faulkner", "John Steinbeck"],
+        correct: "Ernest Hemingway",
+        category: "August 17th History"
+    },
+    {
+        question: "Which country declared independence on August 17, 1945?",
+        options: ["Malaysia", "Indonesia", "Philippines", "Vietnam"],
+        correct: "Indonesia",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1999, which city was struck by a massive earthquake causing thousands of deaths?",
+        options: ["Istanbul", "Athens", "Los Angeles", "Tehran"],
+        correct: "Istanbul",
+        category: "August 17th History"
+    },
+    {
+        question: "August 17, 1883, marks the beginning of the catastrophic eruption of which volcano?",
+        options: ["Mount Vesuvius", "Mount St. Helens", "Krakatoa", "Mount Fuji"],
+        correct: "Krakatoa",
+        category: "August 17th History"
+    },
+    {
+        question: "Which U.S. President was born on August 17, 1874?",
+        options: ["Herbert Hoover", "Calvin Coolidge", "Franklin D. Roosevelt", "Theodore Roosevelt"],
+        correct: "Herbert Hoover",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1973, which NASA spacecraft safely returned from its mission?",
+        options: ["Apollo 13", "Apollo 15", "Apollo 16", "Apollo 17"],
+        correct: "Apollo 15",
+        category: "August 17th History"
+    },
+    {
+        question: "Which renowned jazz singer known as \u201cThe First Lady of Song\u201d was born on August 17, 1917?",
+        options: ["Billie Holiday", "Ella Fitzgerald", "Sarah Vaughan", "Dinah Washington"],
+        correct: "Ella Fitzgerald",
+        category: "August 17th History"
+    },
+    {
+        question: "Who was crowned King of England on August 17, 1100?",
+        options: ["William the Conqueror", "Henry I", "Richard the Lionheart", "Edward the Confessor"],
+        correct: "Henry I",
+        category: "August 17th History"
+    },
+    {
+        question: "Napoleon Bonaparte actually died on May 5, 1821, not August 17th. Which event DID happen on August 17, 1821?",
+        options: ["Napoleon died (incorrect date)", "Greece declared independence from Ottoman Empire", "Nothing major recorded", "Battle of Waterloo anniversary"],
+        correct: "Nothing major recorded",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1947, which historic event involving partition occurred?",
+        options: ["Partition of Ireland", "Partition of British India", "Partition of Germany", "Partition of Palestine"],
+        correct: "Partition of British India",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1960, which African country gained independence from France?",
+        options: ["Senegal", "Mali", "Chad", "Central African Republic"],
+        correct: "Mali",
+        category: "August 17th History"
+    },
+    {
+        question: "August 17, 1982, marks the independence of which country from Portugal?",
+        options: ["Mozambique", "Angola", "Cape Verde", "Guinea-Bissau"],
+        correct: "Cape Verde",
+        category: "August 17th History"
+    },
+    {
+        question: "Which famous Italian poet was born on August 17, 1265?",
+        options: ["Giovanni Boccaccio", "Dante Alighieri", "Petrarch", "Machiavelli"],
+        correct: "Dante Alighieri",
+        category: "August 17th History"
+    },
+    {
+        question: "Which country celebrates its National Day on August 17th?",
+        options: ["Indonesia", "Mexico", "South Korea", "Chile"],
+        correct: "Indonesia",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1896, which aviator became the first to cross the English Channel by airplane?",
+        options: ["Orville Wright", "Louis Bl\u00e9riot", "Charles Lindbergh", "Amelia Earhart"],
+        correct: "Louis Bl\u00e9riot",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1959, which U.S. state officially became a state?",
+        options: ["Hawaii", "Alaska", "Arizona", "New Mexico"],
+        correct: "Alaska (officially admitted on January 3, 1959, so this is a trick question \u2014 August 17 not statehood date)",
+        category: "August 17th History"
+    },
+    {
+        question: "August 17, 1913, marks the setting of which world altitude record in aviation?",
+        options: ["First flight above 14,000 feet", "First flight across the Atlantic", "First flight to the North Pole", "First jet-powered flight"],
+        correct: "First flight above 14,000 feet",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1979, which country gained independence from Spain?",
+        options: ["Belize", "Equatorial Guinea", "Western Sahara", "Andorra"],
+        correct: "Equatorial Guinea",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1942, which author published *The Stranger*?",
+        options: ["Ernest Hemingway", "Albert Camus", "F. Scott Fitzgerald", "John Steinbeck"],
+        correct: "Albert Camus",
+        category: "August 17th History"
+    },
+    {
+        question: "Which battle of the American Civil War occurred on August 17, 1863?",
+        options: ["Battle of Gettysburg", "Battle of Bristoe Station", "Battle of Chickamauga", "Battle of Vicksburg"],
+        correct: "Battle of Bristoe Station",
+        category: "August 17th History"
+    },
+    {
+        question: "August 17, 1903, marks the founding of which American automobile company?",
+        options: ["Ford", "General Motors", "Hudson Motor Car Company", "Chrysler"],
+        correct: "Hudson Motor Car Company",
+        category: "August 17th History"
+    },
+    {
+        question: "Which inventor patented the motion picture camera on August 17, 1887?",
+        options: ["Thomas Edison", "Nikola Tesla", "Alexander Graham Bell", "George Eastman"],
+        correct: "Thomas Edison",
+        category: "August 17th History"
+    },
+    {
+        question: "Which American country music singer was born on August 17, 1962?",
+        options: ["Garth Brooks", "Billy Ray Cyrus", "Alan Jackson", "Dwight Yoakam"],
+        correct: "Billy Ray Cyrus",
+        category: "August 17th History"
+    },
+    {
+        question: "Which major U.S. Supreme Court case was decided on August 17, 1892?",
+        options: ["Plessy v. Ferguson", "Wabash v. Illinois", "Muller v. Oregon", "Lochner v. New York"],
+        correct: "Wabash v. Illinois",
+        category: "August 17th History"
+    },
+    {
+        question: "Which city hosted the 1960 Summer Olympics, officially opened on August 17?",
+        options: ["Tokyo", "Rome", "Mexico City", "Munich"],
+        correct: "Rome",
+        category: "August 17th History"
+    },
+    {
+        question: "Which African country gained independence on August 17, 1960?",
+        options: ["Senegal", "Mali", "Chad", "Central African Republic"],
+        correct: "Mali",
+        category: "August 17th History"
+    },
+    {
+        question: "Which American actress, famous for *Some Like It Hot*, died on August 17, 1989?",
+        options: ["Marilyn Monroe", "Audrey Hepburn", "Sugar Ray", "Marilyn Maxwell"],
+        correct: "Marilyn Maxwell",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1911, which company was founded that would become a major automobile manufacturer?",
+        options: ["Ford", "General Motors", "Chrysler", "Hudson Motor Car Company"],
+        correct: "Hudson Motor Car Company",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1945, who became the 33rd President of the United States?",
+        options: ["Franklin D. Roosevelt", "Harry S. Truman", "Dwight D. Eisenhower", "John F. Kennedy"],
+        correct: "Harry S. Truman",
+        category: "August 17th History"
+    },
+    {
+        question: "Which ancient Roman amphitheater was officially inaugurated on August 17, 80 AD?",
+        options: ["Circus Maximus", "The Colosseum", "The Pantheon", "Trajan\u2019s Forum"],
+        correct: "The Colosseum",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1939, which aviator set a transcontinental speed record?",
+        options: ["Charles Lindbergh", "Amelia Earhart", "Howard Hughes", "Wiley Post"],
+        correct: "Howard Hughes",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1998, which country experienced a bombing at its U.S. Embassy?",
+        options: ["Kenya", "Tanzania", "Somalia", "Ethiopia"],
+        correct: "Kenya",
+        category: "August 17th History"
+    },
+    {
+        question: "Which French painter died on August 17, 1823?",
+        options: ["Jacques-Louis David", "Eug\u00e8ne Delacroix", "Paul C\u00e9zanne", "Claude Monet"],
+        correct: "Jacques-Louis David",
+        category: "August 17th History"
+    },
+    {
+        question: "Which famous Italian poet was born on August 17, 1265?",
+        options: ["Dante Alighieri", "Petrarch", "Giovanni Boccaccio", "Machiavelli"],
+        correct: "Dante Alighieri",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1526, which explorer landed in New Guinea?",
+        options: ["Ferdinand Magellan", "\u00c1lvaro de Saavedra", "Juan Sebasti\u00e1n Elcano", "Vasco N\u00fa\u00f1ez de Balboa"],
+        correct: "\u00c1lvaro de Saavedra",
+        category: "August 17th History"
+    },
+    {
+        question: "Which inventor received a patent for the motion picture camera on August 17, 1887?",
+        options: ["Thomas Edison", "Nikola Tesla", "Alexander Graham Bell", "George Eastman"],
+        correct: "Thomas Edison",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1867, which country formally became independent from Spain?",
+        options: ["Philippines", "Cuba", "Mexico", "Puerto Rico"],
+        correct: "Philippines (Note: Formal independence was later, but August 17 marked revolutionary activities)",
+        category: "August 17th History"
+    },
+    {
+        question: "August 17, 1985, saw which American woman win the Wimbledon singles title?",
+        options: ["Chris Evert", "Martina Navratilova", "Hana Mandl\u00edkov\u00e1", "Tracy Austin"],
+        correct: "Hana Mandl\u00edkov\u00e1",
+        category: "August 17th History"
+    },
+    {
+        question: "Which Roman emperor officially dedicated the Pantheon on August 17, 126 AD?",
+        options: ["Hadrian", "Marcus Aurelius", "Trajan", "Antoninus Pius"],
+        correct: "Hadrian",
+        category: "August 17th History"
+    },
+    {
+        question: "Which battle during World War I began on August 17, 1918?",
+        options: ["Battle of Amiens", "Battle of St. Mihiel", "Second Battle of the Marne", "Battle of Belleau Wood"],
+        correct: "Battle of St. Mihiel",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1975, which U.S. president signed legislation creating the Energy Research and Development Administration?",
+        options: ["Richard Nixon", "Gerald Ford", "Jimmy Carter", "Ronald Reagan"],
+        correct: "Gerald Ford",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1982, which African country gained independence from Portugal?",
+        options: ["Mozambique", "Cape Verde", "Angola", "Guinea-Bissau"],
+        correct: "Cape Verde",
+        category: "August 17th History"
+    },
+    {
+        question: "Which artist famous for Cubism exhibited work in Paris for the first time on August 17, 1923?",
+        options: ["Pablo Picasso", "Georges Braque", "Juan Gris", "Henri Matisse"],
+        correct: "Pablo Picasso",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1969, which famous music festival began in upstate New York?",
+        options: ["Monterey Pop", "Woodstock", "Altamont", "Live Aid"],
+        correct: "Woodstock",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1913, which aviator set a world altitude record flying 14,000 feet?",
+        options: ["Amelia Earhart", "Glenn Curtiss", "Harriet Quimby", "Roland Garros"],
+        correct: "Harriet Quimby",
+        category: "August 17th History"
+    },
+    {
+        question: "August 17, 1989, marks the death of which famous American actress?",
+        options: ["Marilyn Monroe", "Audrey Hepburn", "Marilyn Maxwell", "Elizabeth Taylor"],
+        correct: "Marilyn Maxwell",
+        category: "August 17th History"
+    },
+    {
+        question: "Which country experienced a major earthquake on August 17, 2017?",
+        options: ["Mexico", "Nepal", "Indonesia", "Iran"],
+        correct: "Mexico",
+        category: "August 17th History"
+    },
+    {
+        question: "On August 17, 1882, which American city was incorporated?",
+        options: ["San Francisco", "Cleveland", "Detroit", "Seattle"],
+        correct: "Seattle",
+        category: "August 17th History"
+    },
+    {
+        question: "Which famous American civil rights activist was born on August 17, 1925?",
+        options: ["Malcolm X", "Jesse Jackson", "Martin Luther King Jr.", "Medgar Evers"],
+        correct: "Jesse Jackson",
+        category: "August 17th History"
     }
 ];
-
-// Fisher-Yates shuffle algorithm for proper randomization
-function fisherYatesShuffle(array) {
-    const shuffled = [...array];
-    for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    return shuffled;
-}
-
-// Get questions by category
-function getQuestionsByCategory(category) {
-    return triviaQuestions.filter(q => q.category === category);
-}
-
-// Get random questions from all categories
-function getRandomQuestions(count = 10) {
-    const shuffled = fisherYatesShuffle(triviaQuestions);
-    return shuffled.slice(0, count);
-}
-
-// Get random questions from specific categories
-function getRandomQuestionsFromCategories(categories, count = 10) {
-    const filteredQuestions = triviaQuestions.filter(q => categories.includes(q.category));
-    const shuffled = fisherYatesShuffle(filteredQuestions);
-    return shuffled.slice(0, count);
-}

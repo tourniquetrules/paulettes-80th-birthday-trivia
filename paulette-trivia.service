@@ -1,0 +1,25 @@
+[Unit]
+Description=August 17th Trivia Challenge Server
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=tourniquetrules
+Group=tourniquetrules
+WorkingDirectory=/home/tourniquetrules/80th
+ExecStart=/usr/bin/python3 server.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=paulette-trivia
+
+# Security settings
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ReadWritePaths=/home/tourniquetrules/80th
+
+[Install]
+WantedBy=multi-user.target

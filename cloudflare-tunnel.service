@@ -1,0 +1,22 @@
+[Unit]
+Description=Cloudflare Tunnel for Paulette's 80th Birthday Trivia
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=tourniquetrules
+Group=tourniquetrules
+ExecStart=/usr/local/bin/cloudflared tunnel run paulette-trivia
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=cloudflare-tunnel
+
+# Security settings
+NoNewPrivileges=yes
+PrivateTmp=yes
+
+[Install]
+WantedBy=multi-user.target
